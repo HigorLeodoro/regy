@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button_slide {
+  color: #FFF;
+  background: #FA4616;
+  border: 2px solid rgb(250, 70, 22);
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #FA4616;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_right:hover {
+  box-shadow: inset 400px 0 0 0 #FA4616;
+}
+
+.box1{
+  padding: 50px 30px;
+    background: rgba(0,0,0,.35);
+    color: rgba(255,255,255,.8);
+    z-index: 2;
+    border: none;
+    box-shadow: 0 12px 20px -2px rgb(0 0 0 / 0%);
+    letter-spacing: 1.5px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: ;
+}
+
+.box2{
+  padding: 50px 30px;
+    background: #FA4616;
+    color: rgba(255,255,255,.8);
+    z-index: 2;
+    border: none;
+    box-shadow: 0 12px 20px -2px rgb(0 0 0 / 0%);
+    letter-spacing: 1.5px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.box3{
+  padding: 50px 30px;
+  background: rgba(0,62,81,.5);
+  color: rgba(255,255,255,.8);
+  z-index: 2;
+  border: none;
+  box-shadow: 0 12px 20px -2px rgb(0 0 0 / 0%);
+  letter-spacing: 1.5px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-top: 60px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #FA4616;
+}
+
+.container{
+  width: 85%;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FA4616;
+}
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content .left-side .details i{
+  font-size: 30px;
+  color: #FA4616;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+
+
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #FA4616;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: none;
+  border: 1px solid;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #FA4616;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #C1AC9C;
+}
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+ .container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .container .content .left-side::before{
+   display: none;
+ }
+ .container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
